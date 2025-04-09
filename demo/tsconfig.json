@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["esnext"],
+    "strictNullChecks": true,
+    "outDir": "dist",
+    "rootDir": "src"
+  }
+}

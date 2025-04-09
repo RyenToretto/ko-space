@@ -1,0 +1,39 @@
+{
+  "name": "ko-space",
+  "version": "1.0.1",
+  "packageManager": "pnpm@10.7.1",
+  "author": "koujianfeng",
+  "homepage": "https://github.com/RyenToretto/ko-space#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyenToretto/ko-space.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RyenToretto/ko-space/issues"
+  },
+  "keywords": [
+    "ko-ui",
+    "ko-utils"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "nr lint --fix",
+    "build": "pnpm build:utils",
+    "build:utils": "pnpm --filter ko-utils build",
+    "release": "bumpp && pnpm release:utils && pnpm release:ui",
+    "release:utils": "bumpp --cwd ./packages/ko-utils",
+    "release:ui": "bumpp --cwd ./packages/ko-ui"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.11.0",
+    "@antfu/ni": "^24.3.0",
+    "@types/node": "^22.13.17",
+    "@types/throttle-debounce": "^5.0.2",
+    "bumpp": "^10.1.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.4",
+    "vitest": "^3.1.1"
+  }
+}

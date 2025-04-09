@@ -1,0 +1,13 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "packageManager": "pnpm@10.7.1",
+  "dependencies": {
+    "ko-ui": "workspace:*",
+    "ko-utils": "workspace:*"
+  }
+}

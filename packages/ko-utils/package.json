@@ -1,0 +1,45 @@
+{
+  "name": "ko-utils",
+  "type": "module",
+  "version": "1.0.1",
+  "packageManager": "pnpm@10.7.1",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils",
+  "author": "koujianfeng",
+  "homepage": "https://github.com/RyenToretto/ko-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyenToretto/ko-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RyenToretto/ko-utils/issues"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "lint-fix": "nr lint --fix",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && pnpm publish",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "unbuild": "^3.5.0",
+    "tsx": "^4.19.3",
+    "throttle-debounce": "5.0.0"
+  }
+}
